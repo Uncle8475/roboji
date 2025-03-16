@@ -28,7 +28,11 @@ function EventDetail() {
       <h2>{event.title}</h2>
       <p className="decx">{event.description}</p>
       <div className="mainred">
-        <a href={`/rulebooks/${eventName}.pdf`} download className="event-btn">
+        <a
+          href={`/rulebooks/Final_Rule_Book.pdf`}
+          download
+          className="event-btn"
+        >
           Rule Book
           <img className="download" src={download} alt="download icon" />
         </a>

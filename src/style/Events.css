@@ -112,18 +112,55 @@
   transition: transform 0.2s ease-in-out;
 }
 @media screen and (max-width: 480px) {
+  #events {
+    width: 90%; /* Adjust width for smaller screens */
+    margin: 30px auto;
+  }
+
   #events h1 {
     font-size: 2.5rem;
     padding-top: 30px;
   }
 
   #events p {
-    padding-bottom: 30px;
+    font-size: 0.9rem;
+    padding-bottom: 20px;
   }
 
   #events #eventbtn {
     height: 45px;
-    width: 100px;
+    width: 120px;
     font-size: 1.2rem;
+  }
+
+  #event-list {
+    display: grid;
+    grid-template-columns: repeat(
+      auto-fit,
+      minmax(150px, 1fr)
+    ); /* 1-2 columns */
+    gap: 15px; /* Space between items */
+    padding: 20px;
+  }
+
+  .event-box {
+    width: 100%; /* Full width inside the grid */
+    padding: 20px; /* Reduce padding */
+    font-size: small;
+    text-align: center;
+  }
+
+  .event-box h2 {
+    font-size: 1rem;
+    padding: 5px 0;
+  }
+
+  .event-box p {
+    font-size: 0.9rem;
+    padding: 5px 0;
+  }
+
+  .event-box img {
+    height: 30px; /* Adjust image size */
   }
 }

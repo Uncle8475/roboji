@@ -17,19 +17,12 @@ body {
   background-color: #0d0d0d;
   background-size: cover;
   color: white;
-}
-
-/* Vanishing Animation */
-@keyframes vanish {
-  100% {
-    opacity: 0;
-    visibility: hidden;
-  }
+  overflow-x: hidden; /* Prevents horizontal scroll */
 }
 
 /* Upper Section Styling */
 .upper {
-  height: 100vh; /* Adjusted for smaller screens */
+  height: 100vh;
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
@@ -37,57 +30,39 @@ body {
   align-items: center;
   flex-direction: column;
   background-image: url("../assets/upper.png");
-  position: relative; /* Required for absolute positioning of .wave */
+  position: relative;
+  width: 100vw; /* Ensures full width */
+  text-align: center;
 }
 
-/* Heading Text Animation */
+/* Heading Text */
 .upper p {
   color: rgb(231, 227, 227);
-  font-size: 2.5rem; /* Reduced font size for smaller screens */
+  font-size: 2.5rem;
   text-shadow: 1px 1.5px 10px black;
   font-weight: 600;
   animation: fadeIn 3s ease-in-out forwards;
-  text-align: center;
-  padding: 0 20px; /* Added padding to prevent text from touching edges */
-}
-
-/* Fade-in Animation */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+  padding: 0 20px;
 }
 
 /* Wave Element */
 .wave {
-  width: 100%;
+  width: 100vw; /* Ensures full width */
   position: absolute;
-  bottom: 0; /* Always at the bottom */
-  left: 0; /* Align to the left */
-  z-index: 1;
-  margin-bottom: -1px; /* Ensure it stays above other content if needed */
+  margin-bottom: -10px;
+  bottom: 0;
+  left: 0;
 }
 
-/* Responsive Styles for Phones */
+/* Responsive Styles */
 @media screen and (max-width: 768px) {
-  .upper {
-    height: 80vh; /* Adjusted height for smaller screens */
-  }
-
   .upper p {
-    font-size: 2rem; /* Further reduced font size for smaller screens */
+    font-size: 2rem;
   }
 }
 
 @media screen and (max-width: 480px) {
-  .upper {
-    height: 70vh; /* Further adjusted height for smaller screens */
-  }
-
   .upper p {
-    font-size: 1.5rem; /* Further reduced font size for smaller screens */
+    font-size: 1.5rem;
   }
 }
