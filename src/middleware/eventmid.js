@@ -2,10 +2,15 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import roboticsEvents from "../data/Eventdata";
 import "../style/eventcard.css";
+import { useEffect } from "react";
+import download from "../assets/download-minimalistic-svgrepo-com (2).svg";
+// import "bootstrap/dist/css/bootstrap.css";
 
 function EventDetail() {
   const { eventName } = useParams();
-
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   if (!eventName) {
     return <div className="error-message">Error: Event name not provided</div>;
   }
@@ -21,7 +26,32 @@ function EventDetail() {
   return (
     <div className="event-detail-container">
       <h2>{event.title}</h2>
-      <p>{event.description}</p>
+      <p className="decx">{event.description}</p>
+      <div className="mainred">
+        <a href={`/rulebooks/${eventName}.pdf`} download className="event-btn">
+          Rule Book
+          <img className="download" src={download} alt="download icon" />
+        </a>
+
+        {/* Register Button */}
+        <a href={`/register/${eventName}`} className="event-btn register-btn">
+          Register
+        </a>
+      </div>
+      {event.extraimg &&
+        Array.isArray(event.extraimg) &&
+        event.extraimg.length > 0 && (
+          <div className="extra-images-container">
+            {event.extraimg.map((img, index) => (
+              <img
+                key={index}
+                src={img}
+                alt={`Extra Arena Image ${index + 1}`}
+                className="extra-img"
+              />
+            ))}
+          </div>
+        )}
 
       <div className="eventcard">
         <h3>Arena</h3>

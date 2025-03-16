@@ -23,18 +23,18 @@ function Navbar() {
           </Link>
         </li>
         <li>
-          <Link to="/about" onClick={() => setIsOpen(false)}>
+          <Link to="/#about" onClick={() => setIsOpen(false)}>
             About
           </Link>
         </li>
         <li>
-          <Link to="/events" onClick={() => setIsOpen(false)}>
+          <Link to="/#events" onClick={() => setIsOpen(false)}>
             Events
           </Link>
         </li>
         <li>
-          <Link to="/contact" onClick={() => setIsOpen(false)}>
-            Contact
+          <Link to="#Milestones" onClick={() => setIsOpen(false)}>
+            Milestone
           </Link>
         </li>
       </ul>

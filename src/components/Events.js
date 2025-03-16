@@ -3,7 +3,7 @@ import "../style/Events.css";
 import eventsData from "../data/Eventdata";
 import { Link } from "react-router-dom";
 function Events() {
-  console.log(eventsData); // Debugging: Check if it's an array
+  console.log(eventsData);
 
   if (!Array.isArray(eventsData)) {
     return <p>Error: eventsData is not an array</p>;

@@ -1,72 +1,99 @@
 .event-detail-container {
-  padding: 20px;
-  max-width: 800px;
-  margin: 0 auto;
-  background-image: url("../assets/download.jpeg");
-  background-size: cover; /* Ensure the background image covers the container */
-  background-position: center; /* Center the background image */
-  border-radius: 10px; /* Rounded corners */
-  position: relative; /* For pseudo-element positioning */
-  overflow: hidden; /* Ensure the pseudo-element doesn't overflow */
-  text-align: center;
-  color: #ffffff; /* White text for better contrast */
-}
-
-/* Black gradient border effect using a pseudo-element */
-.event-detail-container::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 0.8),
-    rgba(0, 0, 0, 0.5)
-  ); /* Black gradient */
-  z-index: 1; /* Place it above the background image */
-  border-radius: 10px; /* Match the container's border radius */
-}
-.event-detail-container h2 {
-  padding: 40px;
-  font-size: 3rem;
-}
-.event-detail-container p {
-  padding: 40px;
-  font-size: 1.2rem;
-}
-/* Ensure content is above the pseudo-element */
-.event-detail-container > * {
-  position: relative;
-  z-index: 2;
+  display: grid;
+  padding: 80px 50px 50px 50px;
+  min-height: 100vh;
+  gap: 50px;
+  margin: auto;
+  place-items: center;
 }
 
 .eventcard {
-  margin-bottom: 20px;
-  padding: 25px;
-  border-radius: 8px;
-  background: rgba(54, 54, 54, 0.7); /* Semi-transparent dark background */
-  backdrop-filter: blur(15px); /* Blur effect */
-  border: none; /* Remove border */
+  display: flex;
+  flex-direction: column;
+  background-image: url("../assets/bagroundmilestone.png");
+  background-repeat: repeat-x;
+  background-size: contain;
+  height: 25vh;
+  justify-content: center;
+  padding: 20px;
+  width: 60%;
+  border-radius: 1rem;
+  border: 1px solid rgb(110, 110, 110);
+  backdrop-filter: blur(10px);
+  background-color: rgba(240, 248, 255, 0.05);
+  image-rendering: crisp-edges;
 }
-
-.eventcard h3 {
+.decx {
   text-align: center;
-  padding: 10px;
+  padding: 0px 160px 0px 160px;
+}
+.eventcard h3 {
+  margin-top: -10px;
   font-size: 1.5rem;
-  color: #ffffff; /* White text for headings */
 }
 
 .eventcard p {
-  text-align: left;
-  padding: 20px;
-  color: #c9c9c9; /* White text for paragraphs */
+  padding-top: 30px;
 }
 
-.error-message {
-  color: red;
-  font-size: 1.2em;
+.event-detail-container h2 {
+  font-size: 3rem;
+}
+.event-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 20px;
+  gap: 8px;
+  margin: 10px;
+  background-color: #9e2a2b;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
   text-align: center;
-  margin-top: 20px;
+  transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.event-btn:hover {
+  background-color: #911617;
+  transform: scale(1.1);
+}
+
+/* Style for the icon */
+.event-btn img {
+  height: 25px; /* Adjust size */
+  width: 25px;
+}
+
+/* Register Button */
+.register-btn {
+  background-color: #003874;
+}
+
+.register-btn:hover {
+  background-color: #002c5a;
+}
+
+/* Fix .download class */
+.mainred {
+  display: flex;
+  flex-direction: row;
+  vertical-align: middle;
+  gap: 10px;
+}
+.extra-images-container {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 20px 0;
+}
+
+.extra-img {
+  width: 100%;
+  max-width: 350px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }

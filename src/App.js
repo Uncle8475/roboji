@@ -14,7 +14,7 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/events/:eventName" element={<EventDetail />} />{" "}
+        <Route path="/events/:eventName" element={<EventDetail />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />

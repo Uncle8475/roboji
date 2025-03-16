@@ -6,7 +6,8 @@ import b5 from "../assets/b5.png";
 import b6 from "../assets/b6.png";
 import b7 from "../assets/b7.png";
 import b8 from "../assets/b8.png";
-
+import soccer1 from "../assets/robosoccere1.png";
+import soccer2 from "../assets/robosoccere2.png";
 const roboticsEvents = [
   {
     id: 1,
@@ -19,8 +20,9 @@ const roboticsEvents = [
     technicalAspects: "Max robot size: 30cm x 30cm; Wireless control allowed",
     restrictions: "No destructive mechanisms allowed",
     img: b1,
+    extraimg: [soccer1, soccer2],
     description:
-      "Two teams compete with one bot each in an arena designed like a football pitch. The main objective is to score the most goals.",
+      "RoboSoccer is a competitive event where manually controlled robots, wired or wireless, compete to score goals while defending their own. The team with the most goals wins, with a tiebreaker if needed.",
   },
   {
     id: 2,
