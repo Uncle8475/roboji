@@ -1,0 +1,68 @@
+.milecontainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 40px;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../assets/bagroundmilestone.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.milebox1 {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  border-width: 1px;
+  border-color: #919191;
+  border-style: solid;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  text-align: center;
+  backface-visibility: visible;
+  max-width: 350px;
+  opacity: 0.7;
+  margin: auto;
+  backdrop-filter: blur(10px);
+  line-height: 27px;
+}
+
+.milebox1:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.milebox1 img {
+  width: 100%;
+  height: auto;
+  max-height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Title */
+.mileboxcontent1 {
+  font-size: 18px;
+  font-weight: bold;
+  color: #fffdfd;
+  margin: 15px 0;
+}
+
+.milebox1 p {
+  font-size: 14px;
+  color: #ffffff;
+  line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+  .milecontainer {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  .milebox1 {
+    padding: 15px;
+  }
+}

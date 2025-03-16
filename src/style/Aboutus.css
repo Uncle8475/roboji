@@ -1,0 +1,101 @@
+/* Full Page Background */
+.whole {
+  min-height: 100vh; /* Ensures it expands when needed */
+  width: 100vw;
+  background-image: url("../assets/Group 30.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centers content properly */
+}
+
+/* Work Section */
+.work {
+  display: flex;
+  flex-direction: column;
+  padding: 50px;
+  gap: 30px;
+  width: 100%;
+  flex-grow: 1; /* Allows it to take available space */
+}
+
+/* Work Content Boxes */
+#work1,
+#work2 {
+  width: 60%;
+  padding: 60px;
+  border-radius: 10px;
+  color: white;
+}
+
+#work1 {
+  align-self: flex-end;
+  text-align: left;
+}
+
+#work2 {
+  align-self: flex-start;
+  text-align: left;
+}
+
+/* Headings */
+#work1 h1,
+#work2 h1 {
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Paragraphs */
+#work1 p,
+#work2 p {
+  font-size: 20px;
+  line-height: 1.6;
+}
+
+/* Fun Section */
+#fun {
+  margin-top: 70px;
+  text-align: right;
+  letter-spacing: 3px;
+  width: 80%;
+  padding: 50px;
+}
+
+/* Fun Text Styling */
+#fun #big {
+  font-size: 2.8rem;
+  font-weight: 600;
+}
+
+#fun #med {
+  font-size: 2.3rem;
+  font-weight: 100;
+}
+
+#fun #vbig {
+  font-size: 3rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .work {
+    height: auto;
+    gap: 20px;
+    padding: 30px;
+  }
+
+  #work1,
+  #work2 {
+    width: 90%;
+    text-align: center;
+    align-self: center;
+  }
+
+  #fun {
+    text-align: center; /* Centers on mobile */
+    width: 100%;
+  }
+}

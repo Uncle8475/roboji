@@ -1,0 +1,142 @@
+.foot {
+  display: flex;
+  flex-wrap: wrap;
+  color: azure;
+  border-top: 1px solid #a2a2a2;
+  border-bottom: 1px solid #a2a2a2;
+  justify-content: space-around;
+  padding: 20px;
+  padding-left: 20vh;
+}
+
+.footbox1 {
+  height: 300px;
+  width: 25%;
+  padding: 10px;
+  margin-top: 50px;
+  min-width: 250px;
+
+  flex-grow: 1; /* Allows flexibility in resizing */
+}
+
+.footbox1 p {
+  max-width: 270px;
+  text-align: center;
+}
+
+.footbox1 h3 {
+  letter-spacing: 4px;
+  padding-left: 10px;
+  padding-bottom: 30px;
+  font-size: 20px;
+}
+
+.footbox1 a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: white;
+}
+
+#email {
+  border-radius: 20px;
+  width: 60%;
+  min-width: 200px;
+  border: 2px solid #d9d9d9;
+  height: 45px;
+  background-color: transparent;
+  color: #d9d9d9;
+  padding-left: 18px;
+  font-size: 1rem;
+}
+
+.contactus img {
+  height: 40px;
+  padding-right: 20px;
+  margin-top: 1px;
+  padding-bottom: 10px;
+  cursor: pointer;
+}
+
+.lastbox {
+  width: 27%;
+  min-width: 250px;
+  flex-grow: 1;
+}
+
+.email-submit {
+  margin-top: 60px;
+  width: 110px;
+  height: 45px;
+  border-radius: 20px;
+  color: white;
+  background: linear-gradient(
+    130deg,
+    rgba(156, 42, 43, 0.31),
+    rgba(116, 34, 35, 0.62),
+    rgb(44, 43, 43)
+  );
+  border: 2px solid #9e2a2b;
+  letter-spacing: 3px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: transform 0.2s ease-in-out;
+  margin-left: 2vh;
+}
+
+#submitbtn:hover {
+  transform: scale(1.1);
+}
+
+#lastlogo {
+  padding-bottom: 30px;
+  margin-left: 10px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1024px) {
+  .foot {
+    flex-wrap: wrap;
+    padding-left: 5vh;
+  }
+
+  .footbox1,
+  .lastbox {
+    width: 45%; /* Keeps side-by-side layout */
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .foot {
+    padding-left: 5vh;
+  }
+  .footbox1,
+  .lastbox {
+    width: 100%; /* Stacks items in smaller screens */
+    text-align: center;
+  }
+
+  .email-submit {
+    margin-top: 40px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .foot {
+    padding-left: 5vh;
+  }
+  .footbox1,
+  .lastbox {
+    width: 100%;
+  }
+
+  .email-submit {
+    width: 100px;
+    height: 40px;
+    font-size: 0.9rem;
+  }
+
+  #email {
+    width: 80%;
+  }
+}

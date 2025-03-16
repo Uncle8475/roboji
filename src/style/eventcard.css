@@ -1,0 +1,72 @@
+.event-detail-container {
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  background-image: url("../assets/download.jpeg");
+  background-size: cover; /* Ensure the background image covers the container */
+  background-position: center; /* Center the background image */
+  border-radius: 10px; /* Rounded corners */
+  position: relative; /* For pseudo-element positioning */
+  overflow: hidden; /* Ensure the pseudo-element doesn't overflow */
+  text-align: center;
+  color: #ffffff; /* White text for better contrast */
+}
+
+/* Black gradient border effect using a pseudo-element */
+.event-detail-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.8),
+    rgba(0, 0, 0, 0.5)
+  ); /* Black gradient */
+  z-index: 1; /* Place it above the background image */
+  border-radius: 10px; /* Match the container's border radius */
+}
+.event-detail-container h2 {
+  padding: 40px;
+  font-size: 3rem;
+}
+.event-detail-container p {
+  padding: 40px;
+  font-size: 1.2rem;
+}
+/* Ensure content is above the pseudo-element */
+.event-detail-container > * {
+  position: relative;
+  z-index: 2;
+}
+
+.eventcard {
+  margin-bottom: 20px;
+  padding: 25px;
+  border-radius: 8px;
+  background: rgba(54, 54, 54, 0.7); /* Semi-transparent dark background */
+  backdrop-filter: blur(15px); /* Blur effect */
+  border: none; /* Remove border */
+}
+
+.eventcard h3 {
+  text-align: center;
+  padding: 10px;
+  font-size: 1.5rem;
+  color: #ffffff; /* White text for headings */
+}
+
+.eventcard p {
+  text-align: left;
+  padding: 20px;
+  color: #c9c9c9; /* White text for paragraphs */
+}
+
+.error-message {
+  color: red;
+  font-size: 1.2em;
+  text-align: center;
+  margin-top: 20px;
+}

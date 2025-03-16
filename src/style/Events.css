@@ -1,0 +1,129 @@
+/* Main container */
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+#events {
+  margin: 50px auto;
+  width: 80%; /* Responsive width */
+  text-align: center;
+}
+
+#events p {
+  margin-top: 20px;
+}
+
+#events #eventbtn {
+  height: 60px;
+  width: 140px;
+  background: linear-gradient(
+    130deg,
+    rgba(156, 42, 43, 0.31),
+    rgba(116, 34, 35, 0.62),
+    rgb(44, 43, 43)
+  );
+  color: white;
+  border-radius: 40px;
+  font-size: 1.7rem;
+  border: 2px solid #9e2a2b;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+#events #eventbtn:hover {
+  background: #9e2a2b;
+  transform: scale(1.05);
+}
+
+#events h1 {
+  padding-top: 90px;
+  font-weight: 900;
+  font-size: 5rem;
+}
+
+#events p {
+  padding-bottom: 90px;
+}
+#event-list {
+  display: grid;
+  grid-template-columns: repeat(4, 0fr);
+
+  justify-content: center;
+  padding-bottom: 50px;
+}
+.event-box p {
+  padding: 10px 10px 10px 0px;
+}
+.event-box h2 {
+  padding: 10px 10px 10px 0px;
+}
+.event-box {
+  padding: 40px 40px 40px 20px;
+  width: 300px;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(145, 145, 145, 1);
+  text-decoration: none;
+  font-size: small;
+  transition: transform 0.2s ease-in-out;
+}
+.event-link {
+  text-decoration: none;
+  color: inherit;
+}
+.event-box:nth-child(-n + 4) {
+  border-top: none;
+}
+
+.event-box:nth-last-child(-n + 4) {
+  border-bottom: none;
+}
+
+.event-box img {
+  border-radius: 50%;
+  border: 2px solid white;
+  height: 35px;
+  transition: height 0.2s ease-in-out;
+  -webkit-filter: blur(0.5px);
+}
+.event-box:hover {
+  background-image: linear-gradient(30deg, rgb(97, 6, 6), rgb(0, 0, 0, 1));
+  color: white;
+  transform: scale(1.03);
+  z-index: 2; /* Keeps hovered box above others */
+  /* Hides borders */
+  border-radius: 5px;
+}
+.event-box img {
+  transition: filter 0.3s ease-in-out;
+}
+
+.event-box:hover img {
+  filter: brightness(0) saturate(100%) invert(27%) sepia(94%) saturate(5605%)
+    hue-rotate(347deg) brightness(80%) contrast(100%);
+}
+.event-box:hover h2,
+.event-box:hover p {
+  transform: scale(1.05); /* Increases text size */
+  transition: transform 0.2s ease-in-out;
+}
+@media screen and (max-width: 480px) {
+  #events h1 {
+    font-size: 2.5rem;
+    padding-top: 30px;
+  }
+
+  #events p {
+    padding-bottom: 30px;
+  }
+
+  #events #eventbtn {
+    height: 45px;
+    width: 100px;
+    font-size: 1.2rem;
+  }
+}

@@ -1,0 +1,93 @@
+@font-face {
+  font-family: "Poppins";
+  src: url("/public/fonts/Poppins/Poppins-Light.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #0d0d0d;
+  background-size: cover;
+  color: white;
+}
+
+/* Vanishing Animation */
+@keyframes vanish {
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+/* Upper Section Styling */
+.upper {
+  height: 100vh; /* Adjusted for smaller screens */
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-image: url("../assets/upper.png");
+  position: relative; /* Required for absolute positioning of .wave */
+}
+
+/* Heading Text Animation */
+.upper p {
+  color: rgb(231, 227, 227);
+  font-size: 2.5rem; /* Reduced font size for smaller screens */
+  text-shadow: 1px 1.5px 10px black;
+  font-weight: 600;
+  animation: fadeIn 3s ease-in-out forwards;
+  text-align: center;
+  padding: 0 20px; /* Added padding to prevent text from touching edges */
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Wave Element */
+.wave {
+  width: 100%;
+  position: absolute;
+  bottom: 0; /* Always at the bottom */
+  left: 0; /* Align to the left */
+  z-index: 1;
+  margin-bottom: -1px; /* Ensure it stays above other content if needed */
+}
+
+/* Responsive Styles for Phones */
+@media screen and (max-width: 768px) {
+  .upper {
+    height: 80vh; /* Adjusted height for smaller screens */
+  }
+
+  .upper p {
+    font-size: 2rem; /* Further reduced font size for smaller screens */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .upper {
+    height: 70vh; /* Further adjusted height for smaller screens */
+  }
+
+  .upper p {
+    font-size: 1.5rem; /* Further reduced font size for smaller screens */
+  }
+}
